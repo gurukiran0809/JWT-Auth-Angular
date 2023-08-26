@@ -1,0 +1,9 @@
+<div>
+    <h1>Registration</h1>
+    <form #login="ngForm" (ngSubmit)="userregistration(login.value)">
+        Name:<input type="text" name="name" ngModel><br><br>
+        Email:<input type="mail" name="email" ngModel><br><br>
+        Password<input type="password" name="password" ngModel><br><br>
+        <button type="submit">Register</button><br><br>
+    </form>
+</div>

@@ -31,5 +31,24 @@ export class UserService {
     .set("Authorization",`Bearer ${localStorage.getItem('token')}`)
     return this.http.post("http://127.0.0.1:8000/api/user_details",{},{headers}); 
   }
+
+  register(data:any){
+    this.http.post("http://127.0.0.1:8000/api/register",data).subscribe((result:any)=>{
+      console.log(result['status']);
+      this.router.navigate(['/login']);
+    })
+  }
+
+  sendResetPasswordLink(data:any) {
+    console.log("sending mail");
+    return this.http.post('http://127.0.0.1:8000/api/reset_password_email', data);
+  }
+
+  resetPassword(data: any) {
+    return this.http.post(
+      'http://127.0.0.1:8000/api/change-password',
+      data
+    );
+  }
 }
  
