@@ -1,1 +1,9 @@
-<p>contact works!</p>
+<div class="box-adjust">
+    <h1>Contact Us</h1>
+    <form #contact_us="ngForm" (ngSubmit)="contactus(contact_us.value)">
+        Name:<br><input type="text" name="name" ngModel><br><br>
+        Email:<br><input type="mail" name="email" ngModel><br><br>
+        Subject:<br><textarea #textarea name="subject" style="height:100px;width: 300px;" ngModel></textarea><br><br>
+        <button type="submit">Submit</button><br><br>
+    </form>
+</div>

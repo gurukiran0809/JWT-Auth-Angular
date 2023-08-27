@@ -1,0 +1,18 @@
+.display-block{
+    padding-top: 5%;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    align-items: center;
+    border-radius: 1%;
+    border-style:ridge;
+    background-color:rgb(218, 170, 100);
+}
+
+.display-block p{
+    padding: 2%;
+}
+
+.display-block h2{
+    padding-left: 2%;
+}
