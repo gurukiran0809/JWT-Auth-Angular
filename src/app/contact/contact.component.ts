@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-contact',
@@ -6,8 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+  constructor(private userService:UserService){
 
+  }
   contactus(data:any){
-   console.log(data);
+   this.userService.contact_us(data)
   }
 }

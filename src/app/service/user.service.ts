@@ -50,5 +50,11 @@ export class UserService {
       data
     );
   }
+
+  contact_us(data:any){
+    return this.http.post('http://127.0.0.1:8000/api/contact_us', data).subscribe((result:any)=>{
+      console.log(result);
+    });
+  }
 }
  
